@@ -1,0 +1,10 @@
+{
+    "platform_id": "1",
+    "bdom": " https://api.aladhan.com/v1",
+    "domain": " https://api.aladhan.com/v1",
+    "short_name": "mosqueApp",
+    "request": 1,
+    "serverType": "dev",
+    "promotionalSms": true,
+    "version": "1.0.0"
+}

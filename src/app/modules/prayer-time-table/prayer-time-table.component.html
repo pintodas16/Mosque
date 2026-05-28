@@ -1,0 +1,81 @@
+<section class="page-hero"
+    style="background-image:url('https://shaha.ancorathemes.com/wp-content/uploads/2017/09/bg.jpg')">
+    <div class="container">
+        <div class="page-hero_content">
+            <h2>Prayer time table</h2>
+        </div>
+    </div>
+</section>
+
+<div class="prayer-time-table pt-100 pb-100">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Prayer time table</h2>
+            <h4 *ngIf="prayerTimeTable">in {{ months[selectedMonth - 1].name }} {{ year }}</h4>
+        </div>
+
+        <div class="time-header">
+            <nz-select [(ngModel)]="selectedMonth" (ngModelChange)="onMonthChange()">
+                <nz-option *ngFor="let month of months" [nzValue]="month.value" [nzLabel]="month.name"></nz-option>
+            </nz-select>
+
+            <button (click)="captureScreen()">
+                <svg width="38" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
+                    <path fill="#6E83B7" d="M10 178h492v240H10z" />
+                    <path fill="#466089" d="M72 334h368v84H72z" />
+                    <path fill="#EDEFF1" d="M101 334h310v140H101z" />
+                    <path fill="#466089" d="M72 94h368v84H72z" />
+                    <path fill="#EDEFF1" d="M411 178H101V38h310z" />
+                    <path fill="#D3D3D3" d="M131 394h250v20H131zM131 354h250v20H131zM131 434h250v20H131z" />
+                    <g>
+                        <circle fill="#FFB0AA" cx="440" cy="241" r="17" />
+                    </g>
+                    <g>
+                        <circle fill="#FFB0AA" cx="372" cy="241" r="17" />
+                    </g>
+                </svg>
+            </button>
+
+        </div>
+
+        <div class="pdf-content" id="contentToConvert">
+            <div class="section-header text-center hidden">
+                <h2>Prayer time table</h2>
+                <h4 *ngIf="prayerTimeTable">in {{ months[selectedMonth - 1].name }} {{ year }}</h4>
+            </div>
+
+            <div *ngIf="loading" class="loader"></div>
+
+            <table *ngIf="!loading" class="table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        <td><span>Date</span></td>
+                        <td><span>Day</span></td>
+                        <td><span>Fajr</span></td>
+                        <td><span>Sunrise</span></td>
+                        <td><span>Zhuhr</span></td>
+                        <td><span>Asr</span></td>
+                        <td><span>Sunset</span></td>
+                        <td><span>Maghrib</span></td>
+                        <td><span>Isha</span></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="show-grid" *ngFor="let item of prayerTimeTable"
+                        [ngClass]="{ 'active-date': item?.date.readable === formattedDate }">
+                        <td>{{item?.date.readable}}</td>
+                        <td>{{item?.date.gregorian.weekday.en }}</td>
+                        <td>{{ convertTime(item?.timings.Fajr) }}</td>
+                        <td>{{ convertTime(item?.timings.Sunrise)}}</td>
+                        <td>{{ convertTime(item?.timings.Dhuhr)}}</td>
+                        <td>{{ convertTime(item?.timings.Asr)}}</td>
+                        <td>{{ convertTime(item?.timings.Sunset)}}</td>
+                        <td>{{ convertTime(item?.timings.Maghrib)}}</td>
+                        <td>{{ convertTime(item?.timings.Isha)}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

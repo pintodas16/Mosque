@@ -1,0 +1,103 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.duas {
+  .col-md-4 {
+    &:nth-child(2) {
+      .duas_content {
+        background: #007d3a;
+        h3,
+        h4,
+        em,
+        p,
+        h5 {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .col-md-6 {
+    &:nth-child(1) {
+      .duas_content {
+        background: #007d3a;
+        h3,
+        h4,
+        em,
+        p,
+        h5 {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &_content {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 54px;
+    height: 100%;
+    border-radius: 10px;
+    background: #f9fafb;
+    text-align: center;
+    h3 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    h4 {
+      font-size: 1.8em;
+      color: #007d3a;
+      margin-bottom: 20px;
+    }
+    em {
+      display: block;
+      font-size: 1.4em;
+      color: #02010170;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 1.6em;
+      line-height: 24px;
+      color: #494949;
+      margin-bottom: 16px;
+    }
+    h5 {
+      font-size: 1.5em;
+      color: #12344f;
+    }
+  }
+}
+.donation-area {
+  position: relative;
+  z-index: 1;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(../../../../../assets/img/color-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 480px;
+    border-radius: 500px;
+    //  border-top-left-radius: 0;
+  }
+
+  &_content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      font-size: 45px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #fff;
+    }
+    .main-btn {
+      margin-top: 35px;
+      background: $seconderyColor;
+      color: #222222;
+    }
+  }
+}

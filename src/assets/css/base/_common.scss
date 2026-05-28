@@ -1,0 +1,137 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: inherit;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
+.page-hero {
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 480px;
+  display: flex;
+  align-items: center;
+
+  &_content {
+    padding-top: 85px;
+
+    h2 {
+      font-size: 50px;
+      color: #fff;
+    }
+  }
+}
+
+.page-header {
+  padding-top: 20px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tab-btns {
+      display: flex;
+      flex-wrap: wrap;
+
+      button {
+        margin-bottom: 10px;
+        min-width: auto;
+        background-color: transparent;
+        border: 2px solid $primaryColor;
+        color: $primaryColor;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+
+      .active {
+        background-color: $btnBg;
+        color: $btnText;
+      }
+    }
+
+    .search {
+      position: relative;
+      width: 33.33%;
+      padding-right: 10px;
+      border-radius: 5px;
+
+      input {
+        padding: 12px;
+        border: none;
+        background-color: #fff;
+        border-radius: 2px;
+        padding-left: 30px;
+        width: 100%;
+        border-radius: 5px;
+
+        &::placeholder {
+          font-size: 13px;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+      }
+    }
+  }
+}
+
+.section-header {
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 45px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.2em;
+    color: #212121;
+  }
+}
+
+.title-area {
+  text-align: center;
+  margin-bottom: 40px;
+  h2 {
+    font-size: 4.5em;
+  }
+  p {
+    max-width: 991px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//  scroll bar
+::-webkit-scrollbar {
+  width: 8px;
+
+  &-track {
+    background: #f1f1f1;
+  }
+
+  &-thumb {
+    background: #bdbbbb;
+  }
+}

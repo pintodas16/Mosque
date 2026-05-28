@@ -1,0 +1,82 @@
+<div class="prayer-time">
+    <div class="prayer-time_top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="prayer-time_top-head">
+                        <h2>Prayer times <span>in Sylhet</span> </h2>
+                        <h4> {{prayerTime?.date.hijri.day}} {{prayerTime?.date.hijri.month.en}}
+                            {{prayerTime?.date.hijri.year}} - {{ prayerTime?.date.readable }}</h4>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="prayer-time_top-suntime">
+                        <li *ngFor="let timing of orderedTimingsTop">
+                            <div class="icon">
+                                <img *ngIf="timing.key === 'Sunrise'" src="assets/img/prayer-time/fajr.png"
+                                    alt="Sunrise">
+                                <img *ngIf="timing.key === 'Sunset'" src="assets/img/prayer-time/magrib.png"
+                                    alt="Sunset">
+                            </div>
+
+                            <div class="bottom">
+                                <div class="time">
+                                    <h3>{{ convertTime(timing.value) }}</h3>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <ul class="prayer-time_bottom">
+                <li *ngFor="let timing of orderedTimings"
+                    [ngClass]="{'active': timing.key === currentPrayer?.key , 'd-none': timing.key === 'Sunrise' }">
+
+                    <div class="icon">
+                        <img *ngIf="timing.key === 'Fajr'" src="assets/img/prayer-time/fajr.png" alt="Fajr">
+                        <img *ngIf="timing.key === 'Dhuhr'" src="assets/img/prayer-time/sunrise2.png" alt="Dhuhr">
+                        <img *ngIf="timing.key === 'Asr'" src="assets/img/prayer-time/Asr.png" alt="Asr">
+                        <img *ngIf="timing.key === 'Maghrib'" src="assets/img/prayer-time/magrib.png" alt="Maghrib">
+                        <img *ngIf="timing.key === 'Isha'" src="assets/img/prayer-time/isha.png" alt="Isha">
+                        <img *ngIf="timing.key === 'Jummah'" src="assets/img/prayer-time/jumaa.png" alt="Jummah">
+                    </div>
+
+                    <div class="name">
+                        <h3>{{ timing.key }}</h3>
+                    </div>
+                    <div class="time">
+                        <h4>{{ convertTime(timing.value) }}</h4>
+
+                        <div class="remaining-time"
+                            *ngIf="timing.key === currentPrayer?.key && currentPrayer?.remainingTime">
+                            <p><svg style="fill: #007d3a;" width="25" id="fi_14228796"
+                                    enable-background="new 0 0 512 512" viewBox="0 0 512 512"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="m269.874 37.489c121.626 0 220.223 98.597 220.223 220.223s-98.597 220.224-220.223 220.224-220.224-98.597-220.224-220.223"
+                                            style="fill:none;stroke:#007d3a;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10">
+                                        </path>
+                                        <g>
+                                            <path
+                                                d="m53.993 221.517c-11.006.035-8.942-18.068 1.71-15.825 8.928 1.619 7.126 16.048-1.71 15.825zm12.935-41.962c-12.229-.414-7.768-19.7 3.35-15.319 7.733 3.039 4.565 15.544-3.35 15.319zm21.056-38.545c-13.436-.763-6.263-21.383 4.836-14.498 6.39 4.109 2.288 14.665-4.836 14.498zm28.286-33.609c-14.717-1.215-4.493-22.937 6.119-13.398 4.963 4.836.321 13.478-6.119 13.398zm34.36-27.36c-7.769.217-10.345-11.079-3.209-14.357 12.174-6.154 16.471 13.622 3.209 14.357zm39.088-20.007c-8.596.193-10.233-12.844-1.776-14.859 11.976-3.552 14.067 14.624 1.776 14.859zm42.286-11.802c-9.525.111-9.833-14.69-.251-15.065 11.267-1.393 11.492 15.579.251 15.065z"
+                                                fill="#007d3a"></path>
+                                        </g>
+                                        <g
+                                            style="fill:none;stroke:#007d3a;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10">
+                                            <path d="m269.874 91.589v166.124l79.048 56.208"></path>
+                                            <path d="m16.975 290.388 32.675-32.675 32.676 32.675"></path>
+                                        </g>
+                                    </g>
+                                </svg> - {{ formatRemainingTime(currentPrayer.remainingTime) }}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

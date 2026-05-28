@@ -1,0 +1,164 @@
+<div class="donation-area pt-100 pb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="donation-area_content">
+          <h2>Donate now from as little</h2>
+          <p>
+            "The parable of those who spend their wealth in Allah’s Way is as
+            the parable of a grain; it grows seven ears, and in each ear there
+            are a hundred grains. Allah gives manifold increase to whom He
+            wills. And Allah is All-Embracing, All-Knowing." Surah Al-Baqarah,
+            261)
+          </p>
+
+          <button class="main-btn">Donate now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <section class="donation pb-100">
+  <div class="container">
+    <div class="donation-inner">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="donation-left">
+            <div class="donation-left_thumb">
+              <img
+                src="https://img.freepik.com/free-photo/hand-holding-coin-bank-symbolizing-wealth-growth-generated-by-ai_188544-32732.jpg?t=st=1720086629~exp=1720090229~hmac=bb3682a9b81a271919b73199437156bd5c0a5dea28789df77321d8a4e85092eb&w=1380"
+                alt="donation"
+              />
+            </div>
+            <div class="donation-left_text">
+              <p>
+                Many people choose to donate because they want to make a
+                positive impact on the world. Their generosity allows them to
+                invest in creating lasting change.
+              </p>
+              <p>
+                However, donating isn't just about helping others; it can also
+                be a deeply personal experience.
+              </p>
+              <p>
+                <a [routerLink]="['/']"> Read More </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="donation-right">
+            <h3>Make Your Donation</h3>
+            <ul>
+              <li
+                *ngFor="let item of amountOptions; let i = index"
+                (click)="onListItemClick($event, i)"
+                [ngClass]="{ selectedItem: selectedIndex === i }"
+              >
+                {{ item }}
+              </li>
+            </ul>
+            <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+              <nz-form-item>
+                <nz-form-label nzLabelAlign="left" nzRequired nzFor="name"
+                  >Your Amount</nz-form-label
+                >
+                <nz-form-control nzErrorTip="Please input your amount">
+                  <div class="form-item-box1">
+                    <div class="amount-input">
+                      <input
+                        [(ngModel)]="selectedValue"
+                        type="text"
+                        nz-input
+                        formControlName="amount"
+                        placeholder="Please input your amount"
+                      />
+                    </div>
+                    <div>
+                      <nz-select ngModel="lucy" nzPlaceHolder="USD">
+                        <nz-option nzValue="USD" nzLabel="USD"></nz-option>
+                        <nz-option nzValue="GBP" nzLabel="GBP"></nz-option>
+                        <nz-option nzValue="BDT" nzLabel="BDT"></nz-option>
+                      </nz-select>
+                    </div>
+                  </div>
+                </nz-form-control>
+              </nz-form-item>
+
+              <nz-radio-group [(ngModel)]="radioValue">
+                <label nz-radio nzValue="One-time">One-time</label>
+                <label nz-radio nzValue="Monthly">Monthly</label>
+              </nz-radio-group>
+              <nz-form-item>
+                <nz-form-label nzLabelAlign="left" nzRequired nzFor="name"
+                  >Name</nz-form-label
+                >
+                <nz-form-control nzErrorTip="Please input your name">
+                  <input
+                    type="text"
+                    nz-input
+                    formControlName="name"
+                    placeholder="Please input your name"
+                  />
+                </nz-form-control>
+              </nz-form-item>
+              <div class="form-item-box2">
+                <nz-form-item>
+                  <nz-form-label nzLabelAlign="left" nzRequired nzFor="email"
+                    >E-mail</nz-form-label
+                  >
+                  <nz-form-control nzErrorTip="The input is not valid E-mail!">
+                    <input
+                      nz-input
+                      formControlName="email"
+                      id="email"
+                      placeholder="Please input your email"
+                    />
+                  </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                  <nz-form-label nzRequired>Mobile</nz-form-label>
+                  <nz-form-control>
+                    <input
+                      nz-input
+                      formControlName="mobile"
+                      placeholder="mobile"
+                    />
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+              <nz-form-item>
+                <nz-form-label nzLabelAlign="left" nzRequired
+                  >Message</nz-form-label
+                >
+                <nz-form-control
+                  nzHasFeedback
+                  nzErrorTip="Please write something here!"
+                >
+                  <textarea
+                    formControlName="message"
+                    nz-input
+                    rows="4"
+                    placeholder="write message"
+                  ></textarea>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item nz-row>
+                <nz-form-control>
+                  <label nz-checkbox formControlName="agree">
+                    <span>
+                      I accept the Terms & Conditions, Privacy policy and Refund
+                      policy
+                    </span>
+                  </label>
+                </nz-form-control>
+              </nz-form-item>
+              <button class="main-btn">Donate Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

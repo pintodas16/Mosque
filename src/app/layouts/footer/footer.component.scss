@@ -1,0 +1,63 @@
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://templatekit.jegtheme.com/qudrat/wp-content/uploads/sites/178/2021/10/5540930-e1634176965675.jpg")
+      no-repeat center/cover;
+  &-left {
+    height: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+
+    &_logo {
+      margin-bottom: 20px;
+    }
+    p {
+      color: #fff;
+    }
+  }
+  &-right {
+    height: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+
+    h3 {
+      color: #fff;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    ul {
+      li {
+        color: #fff;
+        font-size: 1.7em;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &-icon {
+    ul {
+      display: flex;
+
+      li {
+        padding: 8px;
+        background: #007d3a;
+        border-radius: 50%;
+        transition: all 0.3s;
+        svg {
+          display: block;
+          object-fit: cover;
+          fill: #fff;
+          width: 22px;
+          height: 22px;
+        }
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+        &:hover {
+          background: #fff;
+          svg {
+            fill: #007d3a;
+          }
+        }
+      }
+    }
+  }
+}

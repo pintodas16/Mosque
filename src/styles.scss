@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+@font-face {
+  font-family: "El-Messiri";
+  font-style: normal;
+  font-weight: 400;
+  src: local("El Messiri Regular"),
+    url("./assets/fonts/ElMessiri[wght].woff") format("woff");
+}
+
+@font-face {
+  font-family: "El-Messiri";
+  font-style: normal;
+  font-weight: 400;
+  src: local("El Messiri Regular"),
+    url("./assets/fonts/ElMessiri-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "El-Messiri";
+  font-style: normal;
+  font-weight: 500;
+  src: local("El Messiri Medium"),
+    url("./assets/fonts/ElMessiri-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "El-Messiri";
+  font-style: normal;
+  font-weight: 600;
+  src: local("El Messiri SemiBold"),
+    url("./assets/fonts/ElMessiri-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "El-Messiri";
+  font-style: normal;
+  font-weight: 700;
+  src: local("El Messiri Bold"),
+    url("./assets/fonts/ElMessiri-Bold.woff") format("woff");
+}
+
+// Bangla fonts
+
+@font-face {
+  font-family: "Noto-Sans-Bengali";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto-Sans-Bengali"),
+    url("./assets/fonts/Noto_Sans_Bengali/NotoSansBengali-Regular.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Noto-Sans-Bengali";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto-Sans-Bengali"),
+    url("./assets/fonts/Noto_Sans_Bengali/NotoSansBengali-Medium.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Noto-Sans-Bengali";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Noto-Sans-Bengali"),
+    url("./assets/fonts/Noto_Sans_Bengali/NotoSansBengali-SemiBold.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Noto-Sans-Bengali";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto-Sans-Bengali"),
+    url("./assets/fonts/Noto_Sans_Bengali/NotoSansBengali-Bold.ttf") format("woff");
+}

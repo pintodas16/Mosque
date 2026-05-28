@@ -1,0 +1,48 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.about-us {
+    position: relative;
+    z-index: 1;
+
+    // &::before {
+    //     background-image: url(https://istiqbal-react.wpolive.com/static/media/bg.da5f502892f862ed1de2.png);
+    //     background-position: center;
+    //     position: absolute;
+    //     content: "";
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: -11;
+    //     opacity: 0.2;
+    // }
+
+    &_left {
+        padding: 0px 85px 0px 0px;
+
+        h2 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 65px;
+            margin-bottom: 10px;
+
+            span {
+                display: block;
+            }
+        }
+
+        p {}
+
+        .main-btn {
+            margin-top: 40px;
+        }
+    }
+
+    &_right {
+        border-radius: 10px;
+        img{
+            border-radius: 10px;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@use "variables" as *;
+@use "mixins" as *;
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+.etiquettes {
+  .col-md-6 {
+    &:first-child {
+      .etiquettes_content {
+        background: #007d3a;
+        h3 {
+          color: #fff;
+        }
+        ul {
+          li {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &_content {
+    height: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+    background: #f9fafb;
+    padding: 54px;
+    border-radius: 10px;
+    h3 {
+      font-size: 2.6em;
+      margin-bottom: 30px;
+    }
+    ul {
+      li {
+        font-size: 1.6em;
+        margin-bottom: 8px;
+        line-height: 28px;
+        color: #494949;
+      }
+    }
+    p {
+      font-size: 1.6em;
+      margin-bottom: 5px;
+      color: #494949;
+    }
+  }
+}
+.donation-area {
+  position: relative;
+  z-index: 1;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(../../../../../assets/img/color-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 480px;
+    border-radius: 500px;
+    // border-top-left-radius: 0;
+  }
+
+  &_content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      font-size: 45px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #fff;
+    }
+    .main-btn {
+      margin-top: 35px;
+      background: $seconderyColor;
+      color: #222222;
+    }
+  }
+}

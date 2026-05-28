@@ -1,0 +1,77 @@
+<div class="drawer">
+  <div class="drawer-content">
+    <div class="drawer-content_logo" [routerLink]="['/']">
+      <img
+        src="https://shaha.ancorathemes.com/wp-content/uploads/2018/01/logo.png"
+        alt="logo"
+      />
+    </div>
+    <ul class="drawer-nav">
+      <li class="drawer-nav_item">
+        <a [routerLink]="['/']" class="">Home</a>
+      </li>
+      <li class="drawer-nav_item">
+        <a class="drawer-nav_item--link" (click)="toggleSubMenu1()">
+          <span>About </span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"
+            ></path>
+          </svg>
+        </a>
+        <ul
+          class="drawer-dropdown-menu"
+          [@slideInOut]="isSubMenuOpen1 ? 'open' : 'closed'"
+        >
+          <li class="drawer-nav_item">
+            <a [routerLink]="['/']" class="">Become a Member</a>
+          </li>
+          <li class="drawer-nav_item">
+            <a [routerLink]="['/']" class="">Ramadan Facilities</a>
+          </li>
+          <li class="drawer-nav_item">
+            <a [routerLink]="['/']" class=""> Womens Facilities </a>
+          </li>
+          <li class="drawer-nav_item">
+            <a [routerLink]="['/']" class="">Mosque Center</a>
+          </li>
+          <li class="drawer-nav_item">
+            <a [routerLink]="['/']" class="drawer-nav_item--link">
+              Our Facilities</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="drawer-nav_item prayer-link">
+        <a [routerLink]="['/']" (click)="toggleSubMenu2()">
+          <span>Prayer Timetable </span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"
+            ></path>
+          </svg>
+        </a>
+        <ul
+          class="drawer-dropdown-menu"
+          [@slideInOut]="isSubMenuOpen2 ? 'open' : 'closed'"
+        >
+          <li class="drawer-nav_item">
+            <a [routerLink]="['/']" class="">Become a Member</a>
+          </li>
+          <li class="drawer-nav_item">
+            <a [routerLink]="['/']" class="">Ramadan Facilities</a>
+          </li>
+          <li class="drawer-nav_item">
+            <a [routerLink]="['/']" class=""> Womens Facilities </a>
+          </li>
+        </ul>
+      </li>
+      <li class="drawer-nav_item">
+        <a [routerLink]="['/']" class=""> Services</a>
+      </li>
+      <li class="drawer-nav_item">
+        <a [routerLink]="['/']" class=""> Contact</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.prayer-time-table {
+
+    .section-header {
+        h4 {
+            font-size: 18px;
+            color: $seconderyColor;
+        }
+    }
+
+    .time-header {
+        border: 1px solid #D4D5D3;
+        border-radius: 5px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    table {
+        border-color: #D2D2D1 !important;
+
+        thead {
+            td {
+                font-family: "El-Messiri";
+                font-size: 22px;
+                font-weight: 600;
+                padding: 18px 10px;
+                border-color: #D2D2D1 !important;
+                text-align: center;
+
+                &:nth-child(1) {
+                    background: #EFEFEF;
+                }
+            }
+        }
+
+        tbody {
+            td {
+                font-size: 16px;
+                font-weight: 500;
+                padding: 12px 10px;
+                border-color: #D2D2D1 !important;
+
+                &:nth-child(odd) {
+                    background: #EFEFEF;
+                }
+
+                &:nth-child(even) {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+
+td,
+th {
+    font-size: 16px;
+
+    // span {
+    //     font-size: 16px;
+
+    // }
+}
+
+.active-date {
+    td {
+        background: #DDDDDC !important;
+        color: #013220;
+    }
+}
+
+#contentToConvert {
+    background-color: white;
+    // padding: 20px;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid $primaryColor;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    animation: spin 1.5s linear infinite;
+    margin: auto;
+    display: block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

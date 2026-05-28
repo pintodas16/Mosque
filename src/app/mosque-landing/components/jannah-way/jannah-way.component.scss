@@ -1,0 +1,56 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.donation-area {
+    position: relative;
+
+    // height: 600px;
+    z-index: 1;
+
+
+
+    // &::before {
+    //     position: absolute;
+    //     content: "";
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: #222;
+    //     opacity: 0.1;
+    //     z-index: -1;
+    // }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: url(../../../../assets/img/color-bg.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 480px;
+        border-radius: 500px;
+        border-top-left-radius: 0;
+    }
+
+    &_content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+
+        h2 {
+            font-size: 45px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #fff;
+        }
+        .main-btn{
+            margin-top: 35px;
+            background: $seconderyColor;
+            color: #222222;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+/* body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    font-family: 'El-Messiri';
+}
+
+p {
+    font-size: 1.7em;
+    line-height: 30px;
+} */
+
+.font-bangla {
+  font-family: "Noto-Sans-Bengali", sans-serif;
+}
+
+.font-bangla h1,
+.font-bangla h2,
+.font-bangla h3,
+.font-bangla h4,
+.font-bangla h5,
+.font-bangla h6 {
+  font-weight: 500 !important;
+  font-family: "Noto-Sans-Bengali";
+}
+
+.font-bangla p {
+  font-size: 1.7em;
+  line-height: 30px;
+}
+
+.font-english {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-english h1,
+.font-english h2,
+.font-english h3,
+.font-english h4,
+.font-english h5,
+.font-english h6 {
+  font-weight: 600;
+  font-family: "El-Messiri";
+}
+
+.font-english p {
+  font-size: 1.7em;
+  line-height: 30px;
+}

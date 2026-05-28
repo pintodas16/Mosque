@@ -1,0 +1,77 @@
+<section
+  class="page-hero"
+  style="background-image: url('../../../../../assets/img/contact/hero.png')"
+>
+  <div class="container">
+    <div class="page-hero_content">
+      <h2>Duas</h2>
+    </div>
+  </div>
+</section>
+
+<div class="duas pt-100 pb-70">
+  <div class="container">
+    <div class="title-area">
+      <h2>Daily Supplications</h2>
+      <p>
+        See our selection of chosen supplications for use everyday. Stay
+        connected to your faith.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 pb-30" *ngFor="let item of duas1">
+        <div class="duas_content">
+          <h3>{{ item.title }}</h3>
+          <h4>
+            {{ item.dua }}
+          </h4>
+          <em>
+            {{ item.transliteration }}
+          </em>
+          <p>
+            {{ item.translation }}
+          </p>
+          <h5>{{ item.reference }}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 pb-30" *ngFor="let item of duas2">
+        <div class="duas_content">
+          <h3>{{ item.title }}</h3>
+          <h4>
+            {{ item.dua }}
+          </h4>
+          <em>
+            {{ item.transliteration }}
+          </em>
+          <p>
+            {{ item.translation }}
+          </p>
+          <h5>{{ item.reference }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="donation-area pb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="donation-area_content">
+          <h2>Donate now from as little</h2>
+          <p>
+            "The parable of those who spend their wealth in Allah’s Way is as
+            the parable of a grain; it grows seven ears, and in each ear there
+            are a hundred grains. Allah gives manifold increase to whom He
+            wills. And Allah is All-Embracing, All-Knowing." Surah Al-Baqarah,
+            261)
+          </p>
+
+          <button class="main-btn">Donate now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
